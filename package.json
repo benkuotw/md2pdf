@@ -1,0 +1,21 @@
+{
+  "name": "md2pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "github-markdown-css": "^5.9.0",
+    "markdown-it": "^15.0.1",
+    "markdown-it-github-alerts": "^1.0.1",
+    "prismjs": "^1.30.0",
+    "puppeteer": "^25.9.0",
+    "tlds": "^1.261.0"
+  }
+}
