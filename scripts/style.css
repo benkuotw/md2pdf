@@ -2,7 +2,7 @@
 body {
   margin: 0;
   padding: 40px;
-  background-color: #f7f7f7;
+  background-color: #ffffff;
   color: #1f2328;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 }
@@ -207,4 +207,15 @@ body {
   height: 1px !important;
   background-color: #e1e4e8 !important;
   border: none !important;
+}
+
+/* Hide GitHub alert SVG icons and uppercase titles to match preview */
+.markdown-alert-title svg {
+  display: none !important;
+}
+.markdown-alert-title {
+  text-transform: uppercase !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  margin-bottom: 4px !important;
 }
