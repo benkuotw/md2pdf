@@ -1,18 +1,32 @@
 # md2pdf Skill
 
-This is an Antigravity agent skill designed to seamlessly convert Markdown (`.md`) files into perfectly styled PDF documents. It identically matches the Antigravity preview pane styling, including exact typography, GitHub Light mode backgrounds, custom GitHub Alerts, and PrismJS syntax highlighting.
+An agent skill that converts Markdown (`.md`) files into styled PDF documents. The output matches the Antigravity preview pane: typography, GitHub Light mode backgrounds, GitHub Alerts, and PrismJS syntax highlighting.
+
+It works with any agent that reads `SKILL.md` skills, including Claude Code and Google Antigravity. It needs Node.js.
 
 ## Installation
 
-1. Navigate to your project's `.agents/skills` directory:
+1. Go to the skills folder of your agent:
+
+   | Agent | Skills folder |
+   | --- | --- |
+   | Claude Code (all projects) | `~/.claude/skills` |
+   | Claude Code (one project) | `<project>/.claude/skills` |
+   | Antigravity (one project) | `<project>/.agents/skills` |
+   | Antigravity (all projects) | `~/.gemini/antigravity/skills` (check your version's docs) |
+
    ```bash
-   cd .agents/skills
+   cd ~/.claude/skills
    ```
-2. Clone this repository into a directory named `md2pdf`:
+
+2. Clone this repository into a folder named `md2pdf`:
+
    ```bash
    git clone https://github.com/benkuotw/md2pdf.git
    ```
-3. Install the required Node.js dependencies:
+
+3. Install the Node.js dependencies (this also downloads Chromium for Puppeteer):
+
    ```bash
    cd md2pdf
    npm install
@@ -20,6 +34,14 @@ This is an Antigravity agent skill designed to seamlessly convert Markdown (`.md
 
 ## Usage
 
-Once installed, simply ask your agent to convert a markdown file into a PDF:
+Ask your agent to convert a Markdown file:
 
 > **/md2pdf** convert my_document.md to pdf
+
+You can also run the script yourself:
+
+```bash
+scripts/convert.sh path/to/my_document.md
+```
+
+The PDF is written next to the Markdown file.
